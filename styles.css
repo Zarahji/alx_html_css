@@ -1,0 +1,45 @@
+/* Apply Flexbox to body */
+body {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Header and Footer Styling */
+header, footer {
+    background-color: #4CAF50;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    flex-shrink: 0; /* Prevent shrinking */
+}
+
+/* Apply Flexbox to main */
+main {
+    display: flex;
+    flex-direction: row;
+    flex: auto;
+}
+
+/* Article and Aside Flexbox properties */
+article {
+    flex: 2; /* Use up 2 boxes */
+    overflow-y: auto; /* Enable scrolling */
+    padding: 20px;
+    background-color: #f9f9f9;
+}
+
+aside {
+    flex: 1; /* Use up 1 box */
+    overflow-y: auto; /* Enable scrolling */
+    padding: 20px;
+    background-color: #e9e9e9;
+}
+
+/* Mobile responsive design */
+@media (max-width: 768px) {
+    main {
+        flex-direction: column;
+    }
+}
